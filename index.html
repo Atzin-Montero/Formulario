@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Encuesta de Comidas en CETI</title>
+        <link rel="stylesheet" href="style.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    </head>
+    <body>
+        <nav class="navbar-expand-lg">
+            <h1>Encuesta sobre la alimentación en CETI</h1>
+        </nav>
+        <p>Esta encuesta busca conocer como se alimentan los estudiantes de CETI para identificar sus principales preferencias</p>
+        <form onsubmit="validarFormulario(event)">
+            <div class="container"> 
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" name="nombre">
+                <label for="grado">Grado</label>
+                <input type="number" id="grado" name="grado">
+                <br>
+                <label for="nivel">Nivel</label>
+                <select id="nivel" name="nivel">
+                    <option value="tecnologo">Tecnologo</option>
+                    <option value="ingenieria">Ingenieria</option>
+                </select>
+            </div>
+            <div class="container">
+                <label for="dias_consumo">Cuantos dias a la semana desayunas en CETI?</label>
+                <input type="number" id="dias_consumo" name="dias_consumo">
+            </div>
+            <div class="container">
+                <label>De cuales de estos lugares consigues comida mas a menudo?</label> <br>
+                    <input type="checkbox" id="l1" name="lugar" value="cafeB" required>
+                    <label for="l1">Cafeteria del B</label> <br>
+                    <input type="checkbox" id="l2" name="lugar" value="cafeL" required>
+                    <label for="l2">Cafeteria del L</label> <br>
+                    <input type="checkbox" id="l3" name="lugar" value="lonches" required>
+                    <label for="l3">Lonches afuera del estacionamiento</label> <br>
+                    <input type="checkbox" id="l4" name="lugar" value="hamburguesas" required>
+                    <label for="l4">"Hamburguesas CETI"</label> <br>
+                    <input type="checkbox" id="l5" name="lugar" value="pedido" required>
+                    <label for="l5">Pido comida al CETI</label> <br>
+                    <input type="checkbox" id="l6" name="lugar" value="otro" required>
+                    <label for="l6">Otra manera: <input id="otro lugar" placeholder="Escribe aqui otra manera"></label> <br>
+            </div>
+            <div class="container">
+                <label for="comidad_frecuentes">Que es lo que mas consumes en CETI?</label> <br>
+                <textarea id="comidas_frecuentes" name="comidad_frecuentes" rows="3" cols="100"></textarea>
+            </div>
+            <div class="container">
+                <label for="mejoras">¿Consideras que se necesita mejorar algo en CETI para mejorar la alimentación? Escríbelo aquí</label> <br>
+                <textarea id="mejoras" name="mejoras" rows="3" cols="100"></textarea>
+            </div>
+            <div class="container">
+                <button type="submit" >Enviar</button>
+            </div>
+        </form>
+        <script src="script.js"></script>
+    </body>
+</html>
